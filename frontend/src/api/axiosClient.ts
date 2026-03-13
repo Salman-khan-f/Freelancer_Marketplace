@@ -4,7 +4,7 @@ import { authStorageKeys } from '../constants/auth'
 const apiBaseUrl = import.meta.env.VITE_API_BASE_URL as string | undefined
 
 export const axiosClient = axios.create({
-  baseURL: apiBaseUrl ?? 'http://localhost:8080/api',
+  baseURL: apiBaseUrl ?? 'https://freelancer-marketplace-b5l7.onrender.com/api',
 })
 
 axiosClient.interceptors.request.use((config: InternalAxiosRequestConfig) => {
@@ -42,7 +42,7 @@ axiosClient.interceptors.response.use(
 
       try {
         const refreshResponse = await axios.post(
-          `${apiBaseUrl ?? 'http://localhost:8080/api'}/auth/refresh`,
+          `${apiBaseUrl ?? 'https://freelancer-marketplace-b5l7.onrender.com/api'}/auth/refresh`,
           {
             refreshToken,
           },
