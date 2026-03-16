@@ -34,6 +34,7 @@ export default function CompanyTaskCreatePage() {
 
   return (
     <section>
+      <h1>Company Task Create</h1>
       <h1 className="dashboard-section-title">Create task</h1>
       <form
         onSubmit={handleSubmit}
